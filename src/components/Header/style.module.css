@@ -1,0 +1,142 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004466;
+    color: white;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    z-index: 10;
+    position: absolute;
+    z-index: 1000;
+    background-color: #003366;
+
+
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-left: 30px;
+    cursor: pointer;
+
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 0;
+    margin: 0;
+    padding: 10px 20px;
+
+}
+
+.menuItem {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+/* Ana Menü Öğeleri Hover Efekti */
+.menuItem:hover {
+    color: #ffd700;
+    /* Sarı hover efekti */
+    transition: color 0.3s ease;
+    /* Geçiş efekti */
+}
+
+/* Kurumsal ve Ürünlerimiz Menü Öğeleri için Hover Efekti */
+.menuItem:hover {
+    background-color: #007bff;
+    /* Hover durumu için arka plan rengi */
+    color: white;
+    /* Yazı rengi beyaz olacak */
+    transition: all 0.3s ease;
+    /* Yumuşak geçiş */
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+/* Ok İkonu */
+.arrow {
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+/* Dropdown Menü */
+.dropdownMenu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    color: #333333;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    z-index: 1000;
+    list-style-type: none;
+}
+
+/* Dropdown Menü İçeriği Hover Efekti */
+.dropdownMenu li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #dddddd;
+
+
+}
+
+/* Hover ile Dropdown Menü Öğeleri */
+.dropdownMenu li:hover {
+    background-color: #4c4994;
+    color: #eef2f4;
+}
+
+/* Dropdown Menü Hover'da Görünür */
+.dropdown:hover .dropdownMenu {
+    display: block;
+}
+
+.dropdownLink {
+    text-decoration: none;
+    color: #333333;
+
+}
+
+.hamburger {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #003366;
+        padding: 20px;
+    }
+
+    .showMenu {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
